@@ -1,0 +1,76 @@
+.main-div {
+    margin-left: 30%;
+}
+
+.input-div {
+    background-color: skyblue;
+    width: 60%;
+    display: flex;
+    margin-top: 10px;
+    margin-right: 20px;
+    background-color: skyblue;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.input-task {
+    border-radius: 5px;
+    height: 30px;
+    width: 90%;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    margin-right: 10px;
+    font-weight: 500;
+}
+
+.btn2 {
+    height: 30px;
+    width: 100px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 0px 10px;
+    background-color: rgb(3, 154, 0);
+    color: white;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.list {
+    list-style: none;
+    /* background-color: skyblue; */
+    width: 60%;
+    color: white;
+    padding-top: 5px;
+}
+
+.list-item {
+    padding: 5px;
+    margin-top: 5px;
+    background-color: skyblue;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.del-btn {
+    margin-left: 5px;
+    background-color: red;
+    outline: none;
+    border: none;
+    color: white;
+    padding: 3px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.edit-btn {
+    margin-left: 5px;
+    background-color: rgb(3, 154, 0);
+    outline: none;
+    border: none;
+    color: white;
+    padding: 3px 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}

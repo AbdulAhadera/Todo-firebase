@@ -18,7 +18,7 @@ const Router = () => {
             onAuthStateChanged(auth, (user) => {
                 if (user) {
                     const uid = user.uid;
-                     setIsAuthenticated(true);
+                    setIsAuthenticated(true);
                 } else {
                     setIsAuthenticated(false);
                 }
@@ -34,15 +34,13 @@ const Router = () => {
     }
 
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={isAuthenticated ? <Home /> : <Navigate to="/login" />} />
-                <Route path="/about" element={isAuthenticated ? <AboutUser /> : <Navigate to="/login" />} />
-                <Route path="/signup" element={<SignUp />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/todo" element={isAuthenticated ? <TodoApp /> : <Navigate to="/login" />} />
-            </Routes>
-        </BrowserRouter>
+        <Routes>
+            <Route path="/todo" element={isAuthenticated ? <TodoApp /> : <Navigate to="/login" />} />
+            <Route path="/about" element={isAuthenticated ? <AboutUser /> : <Navigate to="/login" />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/login" element={<Login />} />
+        </Routes>
+
     );
 };
 

@@ -1,0 +1,37 @@
+.nav {
+    background-color: skyblue;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.link-sec {
+    display: flex;
+    justify-content: center;
+    margin-right: 120px;
+    margin-top: 10px;
+    color: white
+}
+
+.nav-links {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.btn {
+    margin-top: 8px;
+    background-color: white;
+    text-decoration: none;
+    color: rgb(84, 83, 83);
+    outline: none;
+    border: none;
+    height: 35px;
+    padding: 55px 20px;
+    border-radius: 17px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}

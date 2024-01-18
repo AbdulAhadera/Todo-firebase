@@ -1,9 +1,10 @@
 .box {
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .box-main {
+    margin-top: 5%;
     background-color: skyblue;
     padding: 20px;
     border-radius: 10px;
@@ -37,4 +38,10 @@
     font-weight: bold;
     font-size: 16px;
     cursor: pointer;
+}
+.error{
+    color: white;
+    text-transform: capitalize;
+    font-weight: bold;
+    margin: 0px 0px 10px 0px;
 }

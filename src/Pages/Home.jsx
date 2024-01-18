@@ -1,8 +1,14 @@
 import React from 'react'
-
+import Navbar from '../Navbar'
+import TodoApp from '../todo'
 function Home() {
   return (
-    <div>Welcome</div>
+    <>
+    <Navbar />
+    <div>
+      <TodoApp />
+    </div>
+    </>
   )
 }
 

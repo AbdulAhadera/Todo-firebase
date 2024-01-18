@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { collection, addDoc, query, where, deleteDoc, getDocs, doc, updateDoc } from "firebase/firestore";
 import { db, auth } from './Config';
 import { onAuthStateChanged, signOut } from "firebase/auth";
+import './Styles/Todo.css'
 
 const TodoApp = () => {
     const [tasks, setTasks] = useState([]);
@@ -109,31 +110,40 @@ const TodoApp = () => {
         }
     };
 
-
-
-
     return (
-        <div>
-            <h1>Todo App</h1>
-            <div>
-                <input
-                    type="text"
-                    value={newTask}
-                    onChange={(e) => setNewTask(e.target.value)}
-                />
-                <button onClick={addTask}>Add Task</button>
+        <>
+            <div className='main-div'>
+
+                <div className='input-div'>
+                    <input
+                        className='input-task'
+                        type="text"
+                        placeholder='Enter your Task here...'
+                        value={newTask}
+                        onChange={(e) => setNewTask(e.target.value)}
+                    />
+                    <button
+                        className='btn2'
+                        onClick={addTask}
+                    >Add Task</button>
+                </div>
+
+                <div className='div-todos'>
+                    <ul className='list'>
+                        {tasks.map((task, index) => (
+                            <li
+                                className='list-item'
+                                key={index}>
+                                {task}
+                                <button className='del-btn' onClick={() => removeTask(index)}>Remove</button>
+                                <button className='edit-btn' onClick={() => updateTask(index)}>Edit</button>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
             </div>
-            <ul>
-                {tasks.map((task, index) => (
-                    <li key={index}>
-                        {task}
-                        <button onClick={() => removeTask(index)}>Remove</button>
-                        <button onClick={() => updateTask(index)}>Edit</button>
-                    </li>
-                ))}
-            </ul>
-            <button onClick={signOutUser}>Log out</button>
-        </div>
+        </>
     );
 };
 
