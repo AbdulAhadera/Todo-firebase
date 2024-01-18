@@ -1,13 +1,9 @@
 
-import TodoApp from './todo';
-import Login from './Login';
-
+import Router from './Router.jsx'
 const App = () => {
   return (
     <div>
-      <Login />
-      <TodoApp />
-
+      <Router />
     </div>
   );
 };
